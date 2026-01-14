@@ -1,0 +1,133 @@
+.section {
+    position: relative;
+    z-index: 1;
+    padding: 4rem 1rem;
+    background: linear-gradient(180deg, transparent 0%, rgba(26, 10, 46, 0.5) 50%, transparent 100%);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.8rem;
+    color: var(--moonlight);
+    margin-bottom: 2.5rem;
+    text-shadow: 0 0 20px var(--glow-purple);
+}
+
+.titleDecor {
+    margin: 0 1rem;
+    color: var(--silver);
+}
+
+.menuGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.2rem;
+}
+
+.menuItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.8rem 1.2rem;
+    background: linear-gradient(180deg, rgba(26, 10, 46, 0.8) 0%, rgba(15, 6, 32, 0.9) 100%);
+    border: 1px solid rgba(192, 192, 192, 0.2);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.menuItem:hover {
+    transform: translateY(-4px);
+    border-color: var(--silver);
+    box-shadow: 0 8px 30px var(--glow-purple);
+}
+
+.tag {
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    background: linear-gradient(135deg, #4a2c7a 0%, #6b3fa0 100%);
+    color: var(--moonlight);
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid var(--silver);
+}
+
+.tagPopular {
+    background: linear-gradient(135deg, #b8860b 0%, #d4af37 100%);
+}
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.itemTitle {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.1rem;
+    color: var(--moonlight);
+    margin-bottom: 0.5rem;
+}
+
+.itemDesc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.moreLink {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.moreLinkButton {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: transparent;
+    border: 1px solid var(--silver);
+    color: var(--moonlight);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.moreLinkButton:hover {
+    background: rgba(45, 27, 78, 0.4);
+    border-color: var(--moonlight);
+    box-shadow: 0 0 15px var(--glow-purple);
+}
+
+@media (max-width: 640px) {
+    .menuGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .menuItem {
+        flex-direction: row;
+        text-align: left;
+        gap: 1rem;
+        padding: 1.2rem;
+    }
+
+    .icon {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .menuItem>div {
+        flex: 1;
+    }
+}

@@ -1,0 +1,77 @@
+.page {
+    min-height: 100vh;
+}
+
+.fortuneSection {
+    position: relative;
+    z-index: 1;
+    padding: 4rem 1rem;
+    background: linear-gradient(180deg, transparent 0%, rgba(26, 10, 46, 0.5) 50%, transparent 100%);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.8rem;
+    color: var(--moonlight);
+    margin-bottom: 2.5rem;
+    text-shadow: 0 0 20px var(--glow-purple);
+}
+
+.titleDecor {
+    margin: 0 1rem;
+    color: var(--silver);
+}
+
+.fortuneCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(180deg, rgba(26, 10, 46, 0.8) 0%, rgba(15, 6, 32, 0.9) 100%);
+    border: 1px solid rgba(192, 192, 192, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.fortuneCard:hover {
+    border-color: var(--silver);
+    box-shadow: 0 8px 30px var(--glow-purple);
+}
+
+.fortuneDescription {
+    color: var(--text-primary);
+    line-height: 2;
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+}
+
+.startFortuneButton {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background: linear-gradient(135deg, #4a2c7a 0%, #6b3fa0 50%, #4a2c7a 100%);
+    border: 2px solid var(--silver);
+    border-radius: 50px;
+    color: var(--moonlight);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0.1em;
+    box-shadow: 0 4px 20px var(--glow-purple);
+}
+
+.startFortuneButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px var(--glow-purple), 0 0 20px var(--glow-silver);
+    border-color: var(--moonlight);
+}

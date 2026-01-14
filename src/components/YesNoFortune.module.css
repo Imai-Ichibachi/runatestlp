@@ -1,0 +1,227 @@
+.container {
+    background: linear-gradient(180deg, #1a0a2e 0%, #0f0620 100%);
+    border: 1px solid var(--silver);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.8rem;
+    color: var(--moonlight);
+    text-shadow: 0 0 20px var(--glow-purple);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-family: 'Noto Serif JP', serif;
+    color: var(--moonlight);
+    font-size: 0.95rem;
+}
+
+.input,
+.select {
+    padding: 0.9rem 1rem;
+    background: rgba(10, 6, 20, 0.8);
+    border: 1px solid rgba(192, 192, 192, 0.3);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.textarea {
+    width: 100%;
+    height: 100px;
+    padding: 0.9rem 1rem;
+    background: rgba(10, 6, 20, 0.8);
+    border: 1px solid rgba(192, 192, 192, 0.3);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: inherit;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: var(--moonlight);
+    box-shadow: 0 0 15px var(--glow-purple);
+}
+
+.submitButton {
+    margin-top: 1rem;
+    padding: 1.2rem 2rem;
+    background: linear-gradient(135deg, #7b68ee 0%, #483d8b 50%, #7b68ee 100%);
+    border: 2px solid #9370db;
+    color: #fff;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(147, 112, 219, 0.5);
+    box-shadow: 0 4px 20px rgba(147, 112, 219, 0.3);
+}
+
+.submitButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(147, 112, 219, 0.5);
+}
+
+.submitButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Result */
+.resultContainer {
+    animation: fadeIn 0.5s ease-out;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.answerBox {
+    margin-bottom: 2rem;
+}
+
+.answerValue {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(147, 112, 219, 0.8);
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    80% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.adviceBox {
+    background: rgba(10, 6, 20, 0.6);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.adviceTitle {
+    color: #9370db;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.adviceText {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+.retryButton {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid #9370db;
+    color: #9370db;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.retryButton:hover {
+    background: rgba(147, 112, 219, 0.2);
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.loadingDot {
+    animation: ball 1s ease-in-out infinite alternate;
+}
+
+@keyframes ball {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
